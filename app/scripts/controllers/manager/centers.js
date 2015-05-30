@@ -18,11 +18,6 @@ function ManagerCentersCtrl($scope, Fbdata) {
 
   $scope.list = Fbdata.center();
 
-  $scope.addMessage = function(newMessage) {
-    if( newMessage ) {
-      Fbdata.center().$add({text: newMessage});
-    }
-  };
 }
 
 function ManagerCentersAddCtrl($scope, Fbdata) {
@@ -37,27 +32,62 @@ function ManagerCentersAddCtrl($scope, Fbdata) {
       {
         'className': 'col-xs-6',
         'type': 'input',
-        'key': 'firstName',
+        'key': 'name',
         'templateOptions': {
-          'label': 'First Name'
+          'label': '이름'
         }
       },
       {
         'className': 'col-xs-6',
         'type': 'input',
-        'key': 'lastName',
+        'key': 'location',
         'templateOptions': {
-          'label': 'Last Name'
+          'label': '소재지'
         },
-        'expressionProperties': {
-          'templateOptions.disabled': '!model.firstName'
-        }
-      }
+      },
+      {
+        'className': 'col-xs-6',
+        'type': 'input',
+        'key': 'phone',
+        'templateOptions': {
+          'label': '대표번호'
+        },
+      },
+      {
+        'className': 'col-xs-6',
+        'type': 'input',
+        'key': 'donation',
+        'templateOptions': {
+          'label': '후원금 총액'
+        },
+      },
+      {
+        'className': 'col-xs-6',
+        'type': 'input',
+        'key': 'img',
+        'templateOptions': {
+          'label': '이미지'
+        },
+      },
+      {
+        'className': 'col-xs-6',
+        'type': 'input',
+        'key': 'regDate',
+        'templateOptions': {
+          'label': '등록일'
+        },
+      },
+
+
+
     ]
   },
+  /*
   {
     'template': '<hr /><div><strong>Address:</strong></div>'
-  },
+  },*/
+
+/*
   {
     'className': 'row',
     'fieldGroup': [
@@ -108,6 +138,9 @@ function ManagerCentersAddCtrl($scope, Fbdata) {
       'label': 'Other Checkbox'
     }
   }
+*/
+
+
 ];
 
   $scope.add = function(item) {
