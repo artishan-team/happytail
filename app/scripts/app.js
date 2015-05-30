@@ -51,7 +51,7 @@ angular
         controller: 'ManagerCentersAddCtrl'
       })
       .when('/manager/centers/:centerId', {
-        templateUrl: 'views/manager/center.detail.html',
+        templateUrl: 'views/manager/centers.detail.html',
         controller: 'ManagerCenterDetailCtrl'
       })
       .when('/manager/centers/:centerId/dogs', {

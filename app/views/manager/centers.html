@@ -1,21 +1,3 @@
-<p>This is the manager/centers view.</p>
-{{centers || json}}
-
-
-<form>
-  <input placeholder="Message..." ng-model="newMessage">
-  <button type="submit" ng-click="addMessage(newMessage);newMessage = null;">send</button>
-</form>
-
-<ul id="messages" ng-show="centers.length">
-    <li ng-repeat="center in centers">{{center.text}}</li>
-</ul>
-
-<span ng-show="authData">
-  <pre>{{authData || json}}</pre>
-  {{ authData.name }} | <a href="#" ng-click="authObj.$unauth()">Logout</a>
-</span>
-
 <!-- 메니저만 가능 -->
 <a href="#/manager/centers/add">add</a>
 
@@ -23,8 +5,8 @@
 <hr>
 <div class="col-lg-6">
   <ht-widget>
-    <ht-widget-header icon="fa-users" title="Users">
-      <input type="text" placeholder="Search" class="form-control input-sm" />
+    <ht-widget-header icon="fa-users" title="센터 정보">
+      <input type="text" placeholder="Search" class="form-control input-sm" ng-model="searchText"/>
     </ht-widget-header>
     <ht-widget-body classes="medium no-padding">
       <div class="table-responsive">
@@ -38,17 +20,20 @@
               <th>후원금 총액</th>
               <th>이미지</th>
               <th>등록일</th>
+              <th>상세정보</th>
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="center in list">
-              <td class="text-center">{{$index + 1}}</td>
-              <td class="text-center">{{center.name}}</td>
-              <td>{{center.location}}</td>
-              <td>{{center.phone}}</td>
-              <td>{{center.donation}}</td>
-              <td>{{center.img}}</td>
-              <td>{{center.regDate}}</td>
+            <tr ng-repeat="item in list | filter: searchText">
+              <td class="text-item">{{$index + 1}}</td>
+              <td class="text-item">{{item.name}}</td>
+              <td>{{item.location}}</td>
+              <td>{{item.phone}}</td>
+              <td>{{item.donation}}</td>
+              <td>{{item.img}}</td>
+              <td>{{item.regDate}}</td>
+
+              <td><a ng-href="#/manager/centers/{{item.$id}}">상세보기</a></td>
             </tr>
           </tbody>
         </table>

@@ -9,14 +9,42 @@
  */
 angular.module('happytailApp')
 .controller('ManagerCentersCtrl', ['$scope', 'Fbdata', ManagerCentersCtrl])
-.controller('ManagerCentersAddCtrl', ['$scope', 'Fbdata', ManagerCentersAddCtrl]);
+.controller('ManagerCentersAddCtrl', ['$scope', 'Fbdata', ManagerCentersAddCtrl])
+.controller('ManagerCenterDetailCtrl', ['$scope', '$routeParams', 'Fbdata', ManagerCenterDetailCtrl]);
 
 function ManagerCentersCtrl($scope, Fbdata) {
   $scope.common.navbar = '/templates/navbar.main.html';
   $scope.common.side = '/templates/side.manager.html';
   $scope.common.header = '/templates/header.manager.html';
 
+  $scope.searchText = '';
   $scope.list = Fbdata.center();
+
+
+}
+
+function ManagerCenterDetailCtrl($scope, $routeParams, Fbdata) {
+  $scope.common.navbar = '/templates/navbar.main.html';
+  $scope.common.side = '/templates/side.manager.html';
+  $scope.common.header = '/templates/header.manager.html';
+
+  /*$scope.centerList = Fbdata.center($routeParams.centerId);*/
+  $scope.center = Fbdata.centerDetail($routeParams.centerId);
+
+/*
+
+  $scope.test = Fbdata.center().$getRecord(routeParams.centerId);
+  $scope.test2 = Fbdata.center();*/
+
+/*  $scope.test = Fbdata.centerDetail().$getRecord(routeParams.centerId);
+
+  console.log('테스트', $scope.test);*/
+
+/*
+  var rec = Fbdata.center.$getRecord($routeParams.centerId);
+
+  console.log('렉 : ' + rec );*/
+  console.log('왜왜왜왜', Fbdata.centerDetail($routeParams.centerId));
 
 }
 
