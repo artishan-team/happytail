@@ -8,10 +8,16 @@
  * Controller of the happytailApp
  */
 angular.module('happytailApp')
-  .controller('CommonCtrl', function ($scope) {
+  .controller('CommonCtrl', ['$scope', '$location', 'Auth', function ($scope, $location, Auth) {
     $scope.common = {
       navbar: false,
       side: false,
       header: false
     };
-  });
+
+    $scope.logout = function() {
+      Auth.$unauth();
+      $location.path('/login');
+    };
+    
+  }]);

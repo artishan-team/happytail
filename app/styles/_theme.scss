@@ -410,6 +410,7 @@ ul.sidebar {
 
 
 // loading ===================================================================
+
 .loading {
     width: 40px;
     height: 40px;
@@ -449,4 +450,24 @@ ul.sidebar {
         transform: scale(1.0);
         -webkit-transform: scale(1.0);
     }
+}
+
+// Card ===================================================================
+
+.card {
+    background-color: #fff;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 8%;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.card.card-login {
+  width: 500px;
 }

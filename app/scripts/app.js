@@ -19,7 +19,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'firebase',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ht.config'
   ])
   .config(function ($routeProvider) {
     $routeProvider

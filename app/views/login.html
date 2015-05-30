@@ -1,1 +1,21 @@
-<p>This is the login view.</p>
+<div>
+  <div class="card card-login card-container">
+    <h1>Happytail login</h1>
+    <p id="profile-name" class="profile-name-card"></p>
+    <form class="form-signin">
+      <input type="email" class="form-control" placeholder="Email address" required autofocus ng-model="email">
+      <input type="password" class="form-control" placeholder="Password" required ng-model="pass">
+      <input type="password" class="form-control" placeholder="Confirm password" required ng-model="confirm" ng-cloak ng-show="createMode">
+      <p ng-show="err" class="error">{{err}}</p>
+      <hr>
+      <button class="btn btn-lg btn-primary btn-block" ng-click="login(email, pass)" ng-hide="createMode">Log In</button>
+      <button class="btn btn-lg btn-default btn-block" ng-click="createMode = true" ng-hide="createMode">Register</button>
+      <div ng-show="createMode">
+        <button class="btn btn-lg btn-primary btn-block" ng-cloak ng-click="createAccount()">Create Account</button>
+        <button class="btn btn-lg btn-default btn-block" ng-cloak ng-click="createMode = false">Cancel</button>
+      </div>
+
+    </form><!-- /form -->
+    <p class="text-muted text-center">보호센터 또는 단체등록은 han@hansh.kr로 문의주세요.</p>
+  </div>
+</div>
