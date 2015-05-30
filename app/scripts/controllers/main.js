@@ -9,9 +9,6 @@
  */
 angular.module('happytailApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.common.navbar = '/templates/navbar.main.html';
+    $scope.common.side = '/templates/side.main.html';
   });
