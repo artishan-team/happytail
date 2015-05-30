@@ -12,7 +12,7 @@ angular.module('happytailApp')
 
 
 function ManagerEventCtrl($scope, Dog) {
-  $scope.common.navbar = '/templates/navbar.main.html';
+  $scope.common.navbar = '/templates/navbar.map.html';
   $scope.common.side = '/templates/side.manager.html';
   $scope.common.header = '/templates/header.manager.html';
 

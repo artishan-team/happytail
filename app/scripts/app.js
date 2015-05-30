@@ -22,6 +22,7 @@ angular
     'ui.bootstrap',
     'formly',
     'formlyBootstrap',
+    'angularDaumMap',
     'ht.config'
   ])
   .config(function ($routeProvider) {
@@ -29,6 +30,10 @@ angular
       .when('/', {
         templateUrl: 'views/page.main.html',
         controller: 'MainCtrl'
+      })
+      .when('/map', {
+        templateUrl: 'views/page.map.html',
+        controller: 'MapCtrl'
       })
       .when('/about', {
         templateUrl: 'views/page.about.html',
@@ -51,8 +56,8 @@ angular
         controller: 'ManagerCentersAddCtrl'
       })
       .when('/manager/centers/:centerId', {
-        templateUrl: 'views/manager/centers.detail.html',
-        controller: 'ManagerCenterDetailCtrl'
+        templateUrl: 'views/manager/center.detail.html',
+        controller: 'ManagerCentersDetailCtrl'
       })
       .when('/manager/centers/:centerId/dogs', {
         templateUrl: 'views/manager/dogs.html',
@@ -89,6 +94,14 @@ angular
       .when('/manager/:centerId/events', {
         templateUrl: 'views/manager/events.my.html',
         controller: 'ManagerMyEventsCtrl'
+      })
+      .when('/help', {
+        templateUrl: 'views/page.help.html',
+        controller: 'HelpCtrl'
+      })
+      .when('/review', {
+        templateUrl: 'views/page.review.html',
+        controller: 'ReviewCtrl'
       })
       .otherwise({
         redirectTo: '/'

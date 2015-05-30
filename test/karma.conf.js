@@ -40,6 +40,7 @@ module.exports = function(config) {
       'bower_components/angular-formly/dist/formly.js',
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.js',
+      'bower_components/angular-daum-map/dist/angular-daum-map.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/mockfirebase/browser/mockfirebase.js',
       // endbower

@@ -10,6 +10,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/material-design-iconic-font/css/material-design-iconic-font.css" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -30,6 +31,7 @@
         </div>
       </div>
     </div>
+  </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
@@ -40,7 +42,7 @@
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-
+    <script src="http://apis.daum.net/maps/maps3.js?apikey=df39863a2caa2256b5c461dfb868e2fb"></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -61,6 +63,7 @@
     <script src="bower_components/angular-formly/dist/formly.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.js"></script>
+    <script src="bower_components/angular-daum-map/dist/angular-daum-map.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -78,6 +81,9 @@
     <script src="scripts/services/firebase.js"></script>
     <script src="scripts/services/firebasedata.js"></script>
     <script src="scripts/controllers/manager/event.js"></script>
+    <script src="scripts/controllers/map.js"></script>
+    <script src="scripts/controllers/help.js"></script>
+    <script src="scripts/controllers/review.js"></script>
     <!-- endbuild -->
 </body>
 </html>

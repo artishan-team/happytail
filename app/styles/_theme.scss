@@ -1,4 +1,8 @@
 // Base ====================================================================
+i.icon{
+  margin-left: -20px;
+  padding-right: 10px;
+}
 
 .browsehappy {
   margin: 0.2em 0;
@@ -18,6 +22,36 @@ html {
 /* .row > div {
     margin-bottom: 15px;
 } */
+
+.main-bg{
+  width:100%;
+  background: url('/images/main.jpg');
+  height: 700px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.main-block{
+  margin-top: 500px;
+  display: block;
+  background: #fff;
+  padding-bottom: 10px;
+}
+
+.main-block .img-circle{
+  position: relative;
+  top: -35px;
+}
+
+.main-block h2{
+  margin-top: -10px;
+}
+
+.page-single{
+  margin-left: -250px;
+}
 .alerts-container .alert:last-child {
     margin-bottom: 0;
 }
@@ -240,7 +274,7 @@ ul.sidebar {
         a {
             text-indent: 25px;
             font-size: 15px;
-            color: #b2bfdc;
+            color: #dfdfdf;
             line-height: 40px;
         }
         a:hover {
@@ -386,9 +420,10 @@ ul.sidebar {
         vertical-align: middle;
         margin-right: 15px;
         i {
+            font-size: 43px;
+            margin-left: 10px;
             line-height: 66px;
             color: #ffffff;
-            font-size: 30px;
         }
     }
     .widget-footer {

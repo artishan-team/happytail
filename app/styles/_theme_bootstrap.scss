@@ -8,6 +8,24 @@
 
 .navbar {
 
+  .navbar-brand{
+    width: 150px;
+
+    img {
+      display: block;
+      position: absolute;
+      width: 39px;
+      top: 10px;
+    }
+    span {
+      padding-left: 44px;
+    }
+  }
+
+  .navbar-brand-long{
+    width: 250px;
+  }
+
   &-default {
 
     .badge {

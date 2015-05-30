@@ -15,9 +15,11 @@ angular.module('happytailApp')
       header: false
     };
 
+    $scope.user = {};
+
     $scope.logout = function() {
       Auth.$unauth();
       $location.path('/login');
     };
-    
+
   }]);
