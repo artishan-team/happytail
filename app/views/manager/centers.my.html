@@ -1,0 +1,20 @@
+<p>This is the manager/centers view.</p>
+{{centers || json}}
+
+
+<form>
+  <input placeholder="Message..." ng-model="newMessage">
+  <button type="submit" ng-click="addMessage(newMessage);newMessage = null;">send</button>
+</form>
+
+<ul id="messages" ng-show="centers.length">
+    <li ng-repeat="center in centers">{{center.text}}</li>
+</ul>
+
+<span ng-show="authData">
+  <pre>{{authData || json}}</pre>
+  {{ authData.name }} | <a href="#" ng-click="authObj.$unauth()">Logout</a>
+</span>
+
+<!-- 메니저만 가능 -->
+<a href="#/manager/centers/add">add</a>

@@ -8,24 +8,24 @@
  * Controller of the happytailApp
  */
 angular.module('happytailApp')
-.controller('ManagerCentersCtrl', ['$scope', 'Center', ManagerCentersCtrl])
-.controller('ManagerCentersAddCtrl', ['$scope', 'Center', ManagerCentersAddCtrl]);
+.controller('ManagerCentersCtrl', ['$scope', 'Fbdata', ManagerCentersCtrl])
+.controller('ManagerCentersAddCtrl', ['$scope', 'Fbdata', ManagerCentersAddCtrl]);
 
-function ManagerCentersCtrl($scope, Center) {
+function ManagerCentersCtrl($scope, Fbdata) {
   $scope.common.navbar = '/templates/navbar.main.html';
   $scope.common.side = '/templates/side.manager.html';
   $scope.common.header = '/templates/header.manager.html';
 
-  $scope.list = Center.centers();
-  
+  $scope.list = Fbdata.center();
+
   $scope.addMessage = function(newMessage) {
     if( newMessage ) {
-      Center.centers().$add({text: newMessage});
+      Fbdata.center().$add({text: newMessage});
     }
   };
 }
 
-function ManagerCentersAddCtrl($scope, Center) {
+function ManagerCentersAddCtrl($scope, Fbdata) {
   $scope.common.navbar = '/templates/navbar.main.html';
   $scope.common.side = '/templates/side.manager.html';
   $scope.common.header = '/templates/header.manager.html';
@@ -113,8 +113,8 @@ function ManagerCentersAddCtrl($scope, Center) {
   $scope.add = function(item) {
     console.log(item);
     // if( newMessage ) {
-    console.log(Center.centers);
-    Center.centers().$add(item);
+    console.log(Fbdata.center);
+    Fbdata.center().$add(item);
     // }
   };
 

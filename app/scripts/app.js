@@ -27,11 +27,11 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/page.main.html',
         controller: 'MainCtrl'
       })
       .when('/about', {
-        templateUrl: 'views/about.html',
+        templateUrl: 'views/page.about.html',
         controller: 'AboutCtrl'
       })
       .when('/login', {
@@ -39,16 +39,12 @@ angular
         controller: 'LoginCtrl'
       })
       .when('/manager', {
-        templateUrl: 'views/manager.html',
+        templateUrl: 'views/page.manager.html',
         controller: 'ManagerCtrl'
       })
       .when('/manager/centers', {
         templateUrl: 'views/manager/centers.html',
         controller: 'ManagerCentersCtrl'
-      })
-      .when('/managers]/dogs', {
-        templateUrl: 'views/managers]/dogs.html',
-        controller: 'ManagersDogsCtrl'
       })
       .when('/manager/centers', {
         templateUrl: 'views/manager/centers.html',
@@ -71,27 +67,27 @@ angular
         controller: 'ManagerEventCtrl'
       })
       .when('/manager/event/history', {
-        templateUrl: 'views/manager/event/history.html',
+        templateUrl: 'views/manager/event/.istory.html',
         controller: 'ManagerEventHistoryCtrl'
       })
-      .when('/manager/my/history', {
-        templateUrl: 'views/manager/my/history.html',
+      .when('/manager/{memeberId}/history', {
+        templateUrl: 'views/manager/history.my.html',
         controller: 'ManagerMyHistoryCtrl'
       })
-      .when('/manager/my/center', {
-        templateUrl: 'views/manager/my/center.html',
+      .when('/manager/{memeberId}/center', {
+        templateUrl: 'views/manager/center.my.html',
         controller: 'ManagerMyCenterCtrl'
       })
-      .when('/manager/my/event', {
-        templateUrl: 'views/manager/my/event.html',
+      .when('/manager/{memeberId}/event', {
+        templateUrl: 'views/manager/event.my.html',
         controller: 'ManagerMyEventCtrl'
       })
-      .when('/manager/my/dogs', {
-        templateUrl: 'views/manager/my/dogs.html',
+      .when('/manager/{memeberId}/dogs', {
+        templateUrl: 'views/manager/dogs.my.html',
         controller: 'ManagerMyDogsCtrl'
       })
-      .when('/manager/my/events', {
-        templateUrl: 'views/manager/my/events.html',
+      .when('/manager/{memeberId}/events', {
+        templateUrl: 'views/manager/events.my.html',
         controller: 'ManagerMyEventsCtrl'
       })
       .otherwise({

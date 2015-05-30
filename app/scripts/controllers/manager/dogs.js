@@ -8,24 +8,24 @@
  * Controller of the happytailApp
  */
 angular.module('happytailApp')
-.controller('ManagerDogsCtrl', ['$scope', 'Dog', ManagerDogsCtrl])
-.controller('ManagerDogsAddCtrl', ['$scope', 'Dog', ManagerDogsAddCtrl]);
+.controller('ManagerDogsCtrl', ['$scope', 'Fbdata', ManagerDogsCtrl])
+.controller('ManagerDogsAddCtrl', ['$scope', 'Fbdata', ManagerDogsAddCtrl]);
 
-function ManagerDogsCtrl($scope, Dog) {
+function ManagerDogsCtrl($scope, Fbdata) {
   $scope.common.navbar = '/templates/navbar.main.html';
   $scope.common.side = '/templates/side.manager.html';
   $scope.common.header = '/templates/header.manager.html';
 
-  $scope.list = Dog;
+  $scope.list = Fbdata.centerDog('emeberid');
 
 }
-function ManagerDogsAddCtrl($scope, Dog) {
+function ManagerDogsAddCtrl($scope, Fbdata) {
   $scope.common.navbar = '/templates/navbar.main.html';
   $scope.common.side = '/templates/side.manager.html';
   $scope.common.header = '/templates/header.manager.html';
 
   $scope.add = function(data) {
-    Dog.dogs().$add(data);
+    Fbdata.centerDog().$add(data);
   };
 
 }
