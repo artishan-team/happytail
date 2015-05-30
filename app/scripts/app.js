@@ -40,6 +40,22 @@ angular
         templateUrl: 'views/manager.html',
         controller: 'ManagerCtrl'
       })
+      .when('/manager/centers', {
+        templateUrl: 'views/manager/centers.html',
+        controller: 'ManagerCentersCtrl'
+      })
+      .when('/managers]/dogs', {
+        templateUrl: 'views/managers]/dogs.html',
+        controller: 'ManagersDogsCtrl'
+      })
+      .when('/manager/centers', {
+        templateUrl: 'views/manager/centers.html',
+        controller: 'ManagerCentersCtrl'
+      })
+      .when('/manager/dogs', {
+        templateUrl: 'views/manager/dogs.html',
+        controller: 'ManagerDogsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
