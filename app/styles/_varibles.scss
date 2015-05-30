@@ -1,0 +1,32 @@
+// Sidebar ===================================================================
+
+/* Sidebar background color */
+ $sidebarBaseColor: #30426a;
+ /* Sidebar header and footer color */
+ $sidebarHeaderColor: darken($sidebarBaseColor, 2%);
+ /* Sidebar title text colour */
+ $sidebarTitleColor:  lighten($sidebarBaseColor, 30%);
+/* Sidebar menu item hover color */
+ $sidebarMenuItemHover: #e99d1a;
+
+ // Content ===================================================================
+
+ #content-wrapper {
+     padding-left: 0;
+     margin-left: 0;
+     width: 100%;
+     height: auto;
+ }
+ @media only screen and (min-width:561px){
+     #page-wrapper.open {
+       padding-left: 250px;
+     }
+ }
+ @media only screen and (max-width:560px){
+     #page-wrapper.open {
+       padding-left: 70px;
+     }
+ }
+ #page-wrapper.open #sidebar-wrapper {
+     left: 150px;
+ }
