@@ -35,7 +35,7 @@ angular
         controller: 'AboutCtrl'
       })
       .when('/login', {
-        templateUrl: 'views/login.html',
+        templateUrl: 'views/page.login.html',
         controller: 'LoginCtrl'
       })
       .when('/manager', {
@@ -46,21 +46,21 @@ angular
         templateUrl: 'views/manager/centers.html',
         controller: 'ManagerCentersCtrl'
       })
-      .when('/manager/centers', {
-        templateUrl: 'views/manager/centers.html',
-        controller: 'ManagerCentersCtrl'
-      })
       .when('/manager/centers/add', {
         templateUrl: 'views/manager/centers.add.html',
         controller: 'ManagerCentersAddCtrl'
       })
-      .when('/manager/dogs', {
-        templateUrl: 'views/manager/dogs.html',
-        controller: 'ManagerDogsCtrl'
+      .when('/manager/centers/:centerId', {
+        templateUrl: 'views/manager/center.detail.html',
+        controller: 'ManagerCenterDetailCtrl'
       })
-      .when('/manager/dogs/add', {
+      .when('/manager/centers/:centerId/dogs', {
+        templateUrl: 'views/manager/dogs.html',
+        controller: 'ManagerCentersDogsCtrl'
+      })
+      .when('/manager/centers/:centerId/dogs/add', {
         templateUrl: 'views/manager/dogs.add.html',
-        controller: 'ManagerDogsAddCtrl'
+        controller: 'ManagerCentersDogsAddCtrl'
       })
       .when('/manager/event', {
         templateUrl: 'views/manager/event.html',
@@ -70,23 +70,23 @@ angular
         templateUrl: 'views/manager/event/.istory.html',
         controller: 'ManagerEventHistoryCtrl'
       })
-      .when('/manager/{memeberId}/history', {
+      .when('/manager/centers/:centerId/history', {
         templateUrl: 'views/manager/history.my.html',
         controller: 'ManagerMyHistoryCtrl'
       })
-      .when('/manager/{memeberId}/center', {
-        templateUrl: 'views/manager/center.my.html',
-        controller: 'ManagerMyCenterCtrl'
-      })
-      .when('/manager/{memeberId}/event', {
+      .when('/manager/:centerId/event', {
         templateUrl: 'views/manager/event.my.html',
         controller: 'ManagerMyEventCtrl'
       })
-      .when('/manager/{memeberId}/dogs', {
+      .when('/manager/:centerId/dogs', {
         templateUrl: 'views/manager/dogs.my.html',
         controller: 'ManagerMyDogsCtrl'
       })
-      .when('/manager/{memeberId}/events', {
+      .when('/manager/:centerId/dogs/add', {
+        templateUrl: 'views/manager/dogs.my.html',
+        controller: 'ManagerMyDogsAddCtrl'
+      })
+      .when('/manager/:centerId/events', {
         templateUrl: 'views/manager/events.my.html',
         controller: 'ManagerMyEventsCtrl'
       })

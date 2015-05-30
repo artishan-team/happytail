@@ -42,7 +42,7 @@ angular.module('happytailApp')
         })
         .then(function(user) {
           // create a user profile in our data store
-          var ref = fbutil.ref('users', user.uid);
+          var ref = fbutil.ref('user', user.uid);
           return fbutil.handler(function(cb) {
             ref.set({email: email, name: name||firstPartOfEmail(email)}, cb);
           });
