@@ -30,14 +30,25 @@
       <div class="table-responsive">
         <table class="table">
           <thead>
-            <tr><th class="text-center">ID</th><th>Username</th><th>Role</th><th>Account</th></tr>
+            <tr>
+              <th class="text-center">번호</th>
+              <th class="text-center">이름</th>
+              <th>소재지</th>
+              <th>대표번호</th>
+              <th>후원금 총액</th>
+              <th>이미지</th>
+              <th>등록일</th>
+            </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="text-center">1</td>
-              <td>Joe Bloggs</td>
-              <td>Super Admin</td>
-              <td>AZ23045</td>
+            <tr ng-repeat="center in list">
+              <td class="text-center">{{$index + 1}}</td>
+              <td class="text-center">{{center.name}}</td>
+              <td>{{center.location}}</td>
+              <td>{{center.phone}}</td>
+              <td>{{center.donation}}</td>
+              <td>{{center.img}}</td>
+              <td>{{center.regDate}}</td>
             </tr>
           </tbody>
         </table>
