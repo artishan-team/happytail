@@ -8,11 +8,26 @@
  * Service in the happytailApp.
  */
 angular.module('happytailApp')
-.factory('Centers', ['fbutil', '$firebaseArray', function(fbutil, $firebaseArray) {
-  var ref = fbutil.ref('centers').limitToLast(10);
-  return $firebaseArray(ref);
+.factory('Center', ['fbutil', '$firebaseArray', function(fbutil, $firebaseArray) {
+  var shared = {};
+  var path = 'centers';
+  shared.centers = function(){
+    var ref = fbutil.ref(path);
+    console.log('hi');
+    return $firebaseArray(ref);
+  };
+  shared.users = function(centerId){
+    var ref = fbutil.ref(path + '/' + centerId);
+    return $firebaseArray(ref);
+  };
+  return shared;
 }])
-.factory('Dogs', ['fbutil', '$firebaseArray', function(fbutil, $firebaseArray) {
-  var ref = fbutil.ref('dogs').limitToLast(10);
-  return $firebaseArray(ref);
+.factory('Dog', ['fbutil', '$firebaseArray', function(fbutil, $firebaseArray) {
+  var shared = {};
+  var path = 'dogs';
+  shared.dogs = function(centerId){
+    var ref = fbutil.ref(path + '/' + centerId);
+    return $firebaseArray(ref);
+  };
+  return shared;
 }]);

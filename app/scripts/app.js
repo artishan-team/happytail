@@ -20,6 +20,8 @@ angular
     'ngTouch',
     'firebase',
     'ui.bootstrap',
+    'formly',
+    'formlyBootstrap',
     'ht.config'
   ])
   .config(function ($routeProvider) {
@@ -52,9 +54,45 @@ angular
         templateUrl: 'views/manager/centers.html',
         controller: 'ManagerCentersCtrl'
       })
+      .when('/manager/centers/add', {
+        templateUrl: 'views/manager/centers.add.html',
+        controller: 'ManagerCentersAddCtrl'
+      })
       .when('/manager/dogs', {
         templateUrl: 'views/manager/dogs.html',
         controller: 'ManagerDogsCtrl'
+      })
+      .when('/manager/dogs/add', {
+        templateUrl: 'views/manager/dogs.add.html',
+        controller: 'ManagerDogsAddCtrl'
+      })
+      .when('/manager/event', {
+        templateUrl: 'views/manager/event.html',
+        controller: 'ManagerEventCtrl'
+      })
+      .when('/manager/event/history', {
+        templateUrl: 'views/manager/event/history.html',
+        controller: 'ManagerEventHistoryCtrl'
+      })
+      .when('/manager/my/history', {
+        templateUrl: 'views/manager/my/history.html',
+        controller: 'ManagerMyHistoryCtrl'
+      })
+      .when('/manager/my/center', {
+        templateUrl: 'views/manager/my/center.html',
+        controller: 'ManagerMyCenterCtrl'
+      })
+      .when('/manager/my/event', {
+        templateUrl: 'views/manager/my/event.html',
+        controller: 'ManagerMyEventCtrl'
+      })
+      .when('/manager/my/dogs', {
+        templateUrl: 'views/manager/my/dogs.html',
+        controller: 'ManagerMyDogsCtrl'
+      })
+      .when('/manager/my/events', {
+        templateUrl: 'views/manager/my/events.html',
+        controller: 'ManagerMyEventsCtrl'
       })
       .otherwise({
         redirectTo: '/'
