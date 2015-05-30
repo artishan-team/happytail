@@ -1,0 +1,162 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'update',
+1 verbose cli   'gnerator-angular' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose cache add [ 'update', null ]
+5 verbose cache add name=undefined spec="update" args=["update",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'update',
+6 verbose parsed url   path: 'update',
+6 verbose parsed url   href: 'update' }
+7 verbose cache add [ 'gnerator-angular', null ]
+8 verbose cache add name=undefined spec="gnerator-angular" args=["gnerator-angular",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'gnerator-angular',
+9 verbose parsed url   path: 'gnerator-angular',
+9 verbose parsed url   href: 'gnerator-angular' }
+10 silly lockFile 0a25ba59-update update
+11 verbose lock update /Users/han/.c9/tmp/.npm/0a25ba59-update.lock
+12 silly lockFile 0abf20e2-gnerator-angular gnerator-angular
+13 verbose lock gnerator-angular /Users/han/.c9/tmp/.npm/0abf20e2-gnerator-angular.lock
+14 silly lockFile 0a25ba59-update update
+15 silly lockFile 0a25ba59-update update
+16 silly lockFile 0abf20e2-gnerator-angular gnerator-angular
+17 silly lockFile 0abf20e2-gnerator-angular gnerator-angular
+18 verbose addNamed [ 'update', '' ]
+19 verbose addNamed [ null, '*' ]
+20 silly lockFile f8258749-update update@
+21 verbose lock update@ /Users/han/.c9/tmp/.npm/f8258749-update.lock
+22 verbose addNamed [ 'gnerator-angular', '' ]
+23 verbose addNamed [ null, '*' ]
+24 silly lockFile 3a5c451c-gnerator-angular gnerator-angular@
+25 verbose lock gnerator-angular@ /Users/han/.c9/tmp/.npm/3a5c451c-gnerator-angular.lock
+26 silly addNameRange { name: 'update', range: '*', hasData: false }
+27 silly addNameRange { name: 'gnerator-angular', range: '*', hasData: false }
+28 verbose request where is /update
+29 verbose request registry https://registry.npmjs.org/
+30 verbose request id 927629125b0c7108
+31 verbose url raw /update
+32 verbose url resolving [ 'https://registry.npmjs.org/', './update' ]
+33 verbose url resolved https://registry.npmjs.org/update
+34 verbose request where is https://registry.npmjs.org/update
+35 info trying registry request attempt 1 at 09:54:12
+36 http GET https://registry.npmjs.org/update
+37 verbose request where is /gnerator-angular
+38 verbose request registry https://registry.npmjs.org/
+39 verbose url raw /gnerator-angular
+40 verbose url resolving [ 'https://registry.npmjs.org/', './gnerator-angular' ]
+41 verbose url resolved https://registry.npmjs.org/gnerator-angular
+42 verbose request where is https://registry.npmjs.org/gnerator-angular
+43 info trying registry request attempt 1 at 09:54:12
+44 http GET https://registry.npmjs.org/gnerator-angular
+45 http 404 https://registry.npmjs.org/gnerator-angular
+46 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+46 verbose headers   'content-type': 'application/json',
+46 verbose headers   'cache-control': 'max-age=0',
+46 verbose headers   'content-length': '51',
+46 verbose headers   'accept-ranges': 'bytes',
+46 verbose headers   date: 'Sat, 30 May 2015 00:54:13 GMT',
+46 verbose headers   via: '1.1 varnish',
+46 verbose headers   age: '0',
+46 verbose headers   connection: 'keep-alive',
+46 verbose headers   'x-served-by': 'cache-fra1225-FRA',
+46 verbose headers   'x-cache': 'MISS',
+46 verbose headers   'x-cache-hits': '0',
+46 verbose headers   'x-timer': 'S1432947253.529862,VS0,VE431' }
+47 silly registry.get cb [ 404,
+47 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+47 silly registry.get     'content-type': 'application/json',
+47 silly registry.get     'cache-control': 'max-age=0',
+47 silly registry.get     'content-length': '51',
+47 silly registry.get     'accept-ranges': 'bytes',
+47 silly registry.get     date: 'Sat, 30 May 2015 00:54:13 GMT',
+47 silly registry.get     via: '1.1 varnish',
+47 silly registry.get     age: '0',
+47 silly registry.get     connection: 'keep-alive',
+47 silly registry.get     'x-served-by': 'cache-fra1225-FRA',
+47 silly registry.get     'x-cache': 'MISS',
+47 silly registry.get     'x-cache-hits': '0',
+47 silly registry.get     'x-timer': 'S1432947253.529862,VS0,VE431' } ]
+48 silly lockFile 3a5c451c-gnerator-angular gnerator-angular@
+49 silly lockFile 3a5c451c-gnerator-angular gnerator-angular@
+50 http 200 https://registry.npmjs.org/update
+51 silly registry.get cb [ 200,
+51 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+51 silly registry.get     etag: '"7Y8DBB3ASI3QFID32Q0E2UKZL"',
+51 silly registry.get     'content-type': 'application/json',
+51 silly registry.get     'cache-control': 'max-age=60',
+51 silly registry.get     'content-length': '18036',
+51 silly registry.get     'accept-ranges': 'bytes',
+51 silly registry.get     date: 'Sat, 30 May 2015 00:54:14 GMT',
+51 silly registry.get     via: '1.1 varnish',
+51 silly registry.get     age: '0',
+51 silly registry.get     connection: 'keep-alive',
+51 silly registry.get     'x-served-by': 'cache-fra1248-FRA',
+51 silly registry.get     'x-cache': 'MISS',
+51 silly registry.get     'x-cache-hits': '0',
+51 silly registry.get     'x-timer': 'S1432947253.536327,VS0,VE526',
+51 silly registry.get     vary: 'Accept' } ]
+52 silly addNameRange number 2 { name: 'update', range: '*', hasData: true }
+53 silly addNameRange versions [ 'update',
+53 silly addNameRange   [ '0.1.0',
+53 silly addNameRange     '0.2.0',
+53 silly addNameRange     '0.3.0-beta',
+53 silly addNameRange     '0.3.1-beta',
+53 silly addNameRange     '0.3.2-beta',
+53 silly addNameRange     '0.3.3-beta',
+53 silly addNameRange     '0.3.3',
+53 silly addNameRange     '0.3.5',
+53 silly addNameRange     '0.3.6' ] ]
+54 verbose addNamed [ 'update', '0.3.6' ]
+55 verbose addNamed [ '0.3.6', '0.3.6' ]
+56 silly lockFile 03d883a6-update-0-3-6 update@0.3.6
+57 verbose lock update@0.3.6 /Users/han/.c9/tmp/.npm/03d883a6-update-0-3-6.lock
+58 silly lockFile 2ca92941-pmjs-org-update-update-0-3-6-tgz https://registry.npmjs.org/update/-/update-0.3.6.tgz
+59 verbose lock https://registry.npmjs.org/update/-/update-0.3.6.tgz /Users/han/.c9/tmp/.npm/2ca92941-pmjs-org-update-update-0-3-6-tgz.lock
+60 verbose addRemoteTarball [ 'https://registry.npmjs.org/update/-/update-0.3.6.tgz',
+60 verbose addRemoteTarball   '11bcae2d5fe3413a5dd0910f424d6310e50c99e8' ]
+61 info retry fetch attempt 1 at 09:54:14
+62 verbose fetch to= /var/folders/ql/2dvvxmbd3pb0yzh3pb8sw0f80000gn/T/npm-82190-FSKHoNJ-/registry.npmjs.org/update/-/update-0.3.6.tgz
+63 http GET https://registry.npmjs.org/update/-/update-0.3.6.tgz
+64 http 200 https://registry.npmjs.org/update/-/update-0.3.6.tgz
+65 silly lockFile 2ca92941-pmjs-org-update-update-0-3-6-tgz https://registry.npmjs.org/update/-/update-0.3.6.tgz
+66 silly lockFile 2ca92941-pmjs-org-update-update-0-3-6-tgz https://registry.npmjs.org/update/-/update-0.3.6.tgz
+67 silly lockFile 03d883a6-update-0-3-6 update@0.3.6
+68 silly lockFile 03d883a6-update-0-3-6 update@0.3.6
+69 silly lockFile f8258749-update update@
+70 silly lockFile f8258749-update update@
+71 error 404 404 Not Found: gnerator-angular
+71 error 404
+71 error 404 'gnerator-angular' is not in the npm registry.
+71 error 404 You should bug the author to publish it
+71 error 404
+71 error 404 Note that you can also install from a
+71 error 404 tarball, folder, or http url, or git url.
+72 error System Darwin 14.3.0
+73 error command "node" "/usr/local/bin/npm" "install" "-g" "update" "gnerator-angular"
+74 error cwd /Users/han/workspace/github/happytail
+75 error node -v v0.10.32
+76 error npm -v 1.4.28
+77 error code E404
+78 verbose exit [ 1, true ]
