@@ -1,1 +1,17 @@
-<p>This is the review view.</p>
+<div class="main-bg"></div>
+<div class="page-single">
+  <div class="container">
+    <div class="row review-block">
+
+      <accordion close-others="oneAtATime">
+        <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+          {{group.content}}
+        </accordion-group>
+      </accordion>
+    </div>
+  </div>
+  <footer class="footer text-center">
+    <hr>
+    <p>Happytail © 2015</p>
+  </footer>
+</div>

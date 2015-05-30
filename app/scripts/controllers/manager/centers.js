@@ -10,7 +10,7 @@
 angular.module('happytailApp')
 .controller('ManagerCentersCtrl', ['$scope', 'Fbdata', ManagerCentersCtrl])
 .controller('ManagerCentersAddCtrl', ['$scope', 'Fbdata', ManagerCentersAddCtrl])
-.controller('ManagerCenterDetailCtrl', ['$scope', '$routeParams', 'Fbdata', ManagerCenterDetailCtrl]);
+.controller('ManagerCentersDetailCtrl', ['$scope', '$routeParams', 'Fbdata', ManagerCenterDetailCtrl]);
 
 function ManagerCentersCtrl($scope, Fbdata) {
   $scope.common.navbar = '/templates/navbar.main.html';
